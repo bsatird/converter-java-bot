@@ -1,26 +1,39 @@
-# Inteligentny Konwerter Walut (Telegram Bot)
+# 🪙 Inteligentny Konwerter Walut (Telegram Bot)
 
-Ten projekt to zaawansowany bot na platformę Telegram, napisany w języku Java. Umożliwia on konwersję tradycyjnych walut fiat (poprzez API Narodowego Banku Polskiego) oraz kryptowalut (poprzez Binance API) w czasie rzeczywistym. Bazową walutą jest Polski Złoty (PLN).
+Ten projekt to zaawansowany bot na platformę Telegram, napisany w języku **Java**. Umożliwia on konwersję tradycyjnych walut fiat (poprzez API Narodowego Banku Polskiego) oraz kryptowalut (poprzez Binance API) w czasie rzeczywistym. Bazową walutą jest Polski Złoty (PLN).
 
-Nazwa bota w Telegramie: `@sudelimasbot` 
+* **Nazwa bota w Telegramie:** `@sudelimasbot`
 
-## Główne Możliwości
-*Konwersja na żywo: Szybkie przeliczanie popularnych walut (USD, EUR, PLN, UAH, GBP) oraz kryptowalut (BTC, ETH, USDT) za pomocą interaktywnych przycisków lub pisząc bezpośrednio w czacie (np. `100 USD PLN`).
-*Wykresy i Historia (30 dni): Bot automatycznie generuje i wysyła graficzne wykresy z historią kursów walut względem PLN.
-*Powiadomienia i Alerty: Możliwość ustawienia własnego progu cenowego (np. powiadom mnie, gdy USD spadnie poniżej 4.15 PLN). Bot automatycznie weryfikuje kursy co godzinę i wysyła wiadomość!
-*Osobisty Portfel (Mój Portfel): Możesz dodawać i odejmować różne waluty i kryptowaluty do swojego wirtualnego portfela. Bot przeliczy sumę wszystkich Twoich aktywów na PLN na podstawie aktualnych kursów rynkowych.
+---
 
-## Wymagania przed uruchomieniem
-Aby zainstalować i uruchomić kod na swoim komputerze, będziesz potrzebować:
-1. Java Development Kit (JDK): Zainstalowana Java w wersji 11, 17 lub wyższej.
-2. Maven / Gradle: System zarządzania zależnościami (np. do pobrania bibliotek TelegramBots, Gson, bazy PostgreSQL).
-3. Konto Telegram: Aby znaleźć bota 
+## ✨ Główne Możliwości
 
+* **Konwersja na żywo:** Szybkie przeliczanie popularnych walut (`USD`, `EUR`, `PLN`, `UAH`, `GBP`) oraz kryptowalut (`BTC`, `ETH`, `USDT`).
+* **Wykresy i Historia (30 dni):** Bot automatycznie generuje i wysyła graficzne wykresy z historią kursów walut.
+* **Powiadomienia i Alerty:** Ustawianie własnych progów cenowych z automatyczną weryfikacją kursu co godzinę.
+* **Osobiście Portfel (Mój Portfel):** Zarządzanie wirtualnym portfelem z automatycznym przeliczaniem sumy wszystkich aktywów na PLN.
 
-## Przykłady interakcji bez klikania (Smart Input)
-Możesz pisać do bota skrótami bez używania menu:
-- `150 EUR PLN` -> natychmiast przeliczy 150 euro na złote.
-- `0.05 BTC USD` -> przeliczy 0.05 Bitcoina na dolary.
-- `/p_add 100 USD` -> doda 100 dolarów do Twojego portfela.
-- `/p_sub 50 USD` -> odejmie 50 dolarów z portfela.
-- `/p_clear` -> usunie wszystkie zapisane aktywa.
+---
+
+## 🎯 OOP & Architecture Highlights
+
+* **Custom Exception Handling:** Wykorzystanie autorskich wyjątków (`try-catch`) do niezawodnej obsługi błędów sieciowych oraz połączeń z bazą danych.
+* **Advanced Data Modeling:** Zastosowanie zasad OOP (dziedziczenie, interfejsy, klasy abstrakcyjne) oraz kolekcji (`ArrayList`, `HashMap`).
+* **Smart API Caching:** Redukcja obciążenia sieciowego i ochrona przed limitami API dzięki buforowaniu kursów walut w bazie PostgreSQL (1h cache).
+
+---
+
+## 🛠 Wymagania przed uruchomieniem
+
+1. **Java Development Kit (JDK):** Wersja 11, 17 lub wyższa.
+2. **PostgreSQL Database:** Zainstalowana i uruchomiona baza danych.
+3. **Maven:** System zarządzania zależnościami w projekcie.
+
+---
+
+## 🚀 Jak uruchomić lokalnie (How to Run)
+
+### 1. Klonowanie repozytorium:
+```bash
+git clone [https://github.com/bsatird/converter-java-bot.git](https://github.com/bsatird/converter-java-bot.git)
+cd converter-java-bot
