@@ -37,3 +37,25 @@ Ten projekt to zaawansowany bot na platformę Telegram, napisany w języku **Jav
 ```bash
 git clone [https://github.com/bsatird/converter-java-bot.git](https://github.com/bsatird/converter-java-bot.git)
 cd converter-java-bot
+```
+2. Konfiguracja Bazy Danych:
+Utwórz bazę danych w PostgreSQL i wpisz swoje dane dostępowe do bazy w kodzie / zmiennych środowiskowych.
+
+3. Uruchomienie projektu:
+Otwórz projekt w swoim IDE (IntelliJ IDEA / VS Code) i uruchom klasę Main.java lub wykonaj w terminalu:
+
+```bash
+mvn clean install
+mvn exec:java -Dexec.mainClass="com.sedulimasbot.Main"
+```
+
+💬 Przykłady interakcji bez klikania (Smart Input)
+150 EUR PLN -> natychmiast przeliczy 150 euro na złote.
+
+0.05 BTC USD -> przeliczy 0.05 Bitcoina na dolary.
+
+/p_add 100 USD -> doda 100 dolarów do Twojego portfela.
+
+/p_sub 50 USD -> odejmie 50 dolarów z portfela.
+
+/p_clear -> usunie wszystkie zapisane aktywa.
