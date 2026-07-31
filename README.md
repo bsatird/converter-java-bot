@@ -35,8 +35,8 @@ Ten projekt to zaawansowany bot na platformę Telegram, napisany w języku **Jav
 
 ### 1. Klonowanie repozytorium:
 ```bash
-git clone [https://github.com/bsatird/converter-java-bot.git](https://github.com/bsatird/converter-java-bot.git)
-cd converter-java-bot
+git clone https://github.com/bsatird/converter-java-bot.git
+cd converter-java-bot/currencybot
 ```
 2. Konfiguracja Bazy Danych:
 Utwórz bazę danych w PostgreSQL i wpisz swoje dane dostępowe do bazy w kodzie / zmiennych środowiskowych.
